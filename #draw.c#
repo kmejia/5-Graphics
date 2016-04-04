@@ -1,4 +1,4 @@
-#include <stdio.h>
+&#include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
@@ -44,7 +44,7 @@ triangles
 04/16/13 13:13:27
 jdyrlandweaver
 ====================*/
-void draw_polygons( struct matrix *polygons, screen s, color c){
+void draw_polygons( struct matrix *polygons, screen s, color c ) {
 }
 
 
