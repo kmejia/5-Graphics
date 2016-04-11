@@ -30,6 +30,9 @@ void add_polygon( struct matrix *polygons,
 		  double x0, double y0, double z0, 
 		  double x1, double y1, double z1, 
 		  double x2, double y2, double z2 ) {
+
+  //adds 3 points
+  //3 lines each
 }
 
 /*======== void draw_polygons() ==========
@@ -45,6 +48,8 @@ triangles
 jdyrlandweaver
 ====================*/
 void draw_polygons( struct matrix *polygons, screen s, color c){
+  //draw 3 lines==1 triangle
+  //go +3 and do the same withthe next 3 points
 }
 
 
