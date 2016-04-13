@@ -73,7 +73,7 @@ void draw_polygons( struct matrix *polygons, screen s, color c){
     double Vx = 0;
     double Vy = 0;
     double Vz = -1;
-    double angle =  norm_z * -1;
+    angle =  norm_z * -1;
     if (angle < 0) {///surcafes are drawn
       draw_line( polygons->m[0][i], polygons->m[1][i],
 		 polygons->m[0][i+1], polygons->m[1][i+1], s, c);
@@ -129,7 +129,7 @@ void add_sphere( struct matrix * points,
     for ( longt = longStart; longt*2 < longStop; longt++ ) {
       
       i1 = lat * (num_steps+1) + longt;
-      i2 =index + num_steps;
+      i2 =i1 + num_steps;
 /* add_edge( points, temp->m[0][index], */
       /* 		temp->m[1][index], */
       /* 		temp->m[2][index], */
@@ -137,26 +137,26 @@ void add_sphere( struct matrix * points,
       /* 		temp->m[1][index] + 1, */
       /* 		temp->m[2][index] ); */
       if (lat == latStop - 1) {				
-	index2 = latStart * num_steps + longt;
+	i2 = latStart * num_steps + longt;
       }
-      add_polygon(points, temp->m[0][index],
-		  temp->m[1][index],
-		  temp->m[2][index],
-		  temp->m[0][index2 + 1],
-		  temp->m[1][index2 + 1],
-		  temp->m[2][index2 + 1],
-		  temp->m[0][index2],
-		  temp->m[1][index2],
-		  temp->m[2][index2]);			
-      add_polygon(points, temp->m[0][index],
-		  temp->m[1][index],
-		  temp->m[2][index],
-		  temp->m[0][index + 1],
-		  temp->m[1][index + 1],
-		  temp->m[2][index + 1],
-		  temp->m[0][index2 + 1],
-		  temp->m[1][index2 + 1],
-		  temp->m[2][index2 + 1]);
+      add_polygon(points, temp->m[0][i1],
+		  temp->m[1][i1],
+		  temp->m[2][i1],
+		  temp->m[0][i2 + 1],
+		  temp->m[1][i2 + 1],
+		  temp->m[2][i2 + 1],
+		  temp->m[0][i2],
+		  temp->m[1][i2],
+		  temp->m[2][i2]);			
+      add_polygon(points, temp->m[0][i1],
+		  temp->m[1][i1],
+		  temp->m[2][i1],
+		  temp->m[0][i1 + 1],
+		  temp->m[1][i1 + 1],
+		  temp->m[2][i1 + 1],
+		  temp->m[0][i2 + 1],
+		  temp->m[1][i2 + 1],
+		  temp->m[2][i2 + 1]);
     }//end points only
   }
   free_matrix(temp);
