@@ -1,11 +1,6 @@
 sphere
 0 0 160
-sphere
-5 10 120
-ident
-xrotate
-50
-apply
+
 torus
 100 -36 1 30
 torus
@@ -13,6 +8,11 @@ torus
 ident
 xrotate
 20
+xrotate
+50
+yrotate
+89
+applyapply
 scale
 1.9 1.9 1.7
 translate
@@ -20,5 +20,5 @@ translate
 apply
 display
 save
-MejiaTso.png
+golf.png
 quit
